@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://nv2bbhcaxqw8"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="LEADERBOURD" type="Button" parent="."]
+offset_left = -130.0
+offset_top = 64.0
+offset_right = 155.0
+offset_bottom = 118.0
+text = "TOP 10
+PLAYERS"
+
+[node name="START" type="Button" parent="."]
+offset_left = 43.0
+offset_top = -42.0
+offset_right = 90.0
+offset_bottom = -11.0
+scale = Vector2(2.10027, 2.10027)
+pivot_offset = Vector2(23.405, 15.805)
+text = "PLAY"
+
+[node name="Camera2D" type="Camera2D" parent="."]

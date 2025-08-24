@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://c40n7wapx561e"]
+
+[ext_resource type="Script" uid="uid://djfuhtbhvgic3" path="res://scripts/gun.gd" id="1_agjl5"]
+[ext_resource type="Texture2D" uid="uid://bcpj00bnyiypu" path="res://assets/weapons.png" id="2_agjl5"]
+[ext_resource type="Script" uid="uid://cslxt1qrykv1t" path="res://scripts/notbox(movement).gd" id="3_dj65e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb4is"]
+atlas = ExtResource("2_agjl5")
+region = Rect2(1732, 0, 1732, 1732)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmtae"]
+atlas = ExtResource("2_agjl5")
+region = Rect2(0, 0, 1732, 1732)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gmtae"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb4is")
+}],
+"loop": true,
+"name": &"alt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmtae")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="gun" type="Node2D"]
+script = ExtResource("1_agjl5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.0659509, 0.0706288)
+sprite_frames = SubResource("SpriteFrames_gmtae")
+offset = Vector2(-9.908, -84.62)
+script = ExtResource("3_dj65e")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(22, -17)

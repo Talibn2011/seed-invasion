@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://62a01r2g1rru"]
+
+[ext_resource type="Script" uid="uid://cle7vlek63kdx" path="res://scripts/game.gd" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cs2w172g02c2h" path="res://scenes/Gun.tscn" id="2_lnu2h"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_yqjtg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(515.329, -4424.21)
+
+[node name="Gun2" parent="." instance=ExtResource("2_lnu2h")]
+
+[node name="PointsLabel" type="Label" parent="."]
+offset_left = -533.0
+offset_top = -303.0
+offset_right = -493.0
+offset_bottom = -280.0
+scale = Vector2(1.75649, 1.75649)
+
+[node name="HealthLabel" type="Label" parent="."]
+offset_left = 459.0
+offset_top = -295.0
+offset_right = 499.0
+offset_bottom = -272.0

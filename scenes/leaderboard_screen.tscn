@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfu30lsk01c48"]
+
+[ext_resource type="Script" uid="uid://dmg8dk80yuyfv" path="res://scripts/leaderboard_screen.gd" id="1_s1uwp"]
+
+[node name="leaderboard" type="CanvasLayer"]
+script = ExtResource("1_s1uwp")
+
+[node name="ScoresContainer" type="VBoxContainer" parent="."]
+offset_left = 480.0
+offset_top = 97.0
+offset_right = 497.0
+offset_bottom = 102.0
+scale = Vector2(1.381, 1.381)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 375.0
+offset_top = 491.0
+offset_right = 733.0
+offset_bottom = 522.0
+text = "AAAAAAAAH NUMBERS
+CLICK HERE TO GO BACK!!!!!
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

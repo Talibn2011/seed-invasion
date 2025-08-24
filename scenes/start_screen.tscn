@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://dywih48fkdqid"]
+
+[ext_resource type="Script" uid="uid://d01cs3rdmgbl4" path="res://scripts/start_screen.gd" id="1_tx5wa"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_tx5wa")
+
+[node name="START" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.442
+anchor_top = -0.396
+anchor_right = 0.442
+anchor_bottom = -0.396
+offset_left = 42.816
+offset_top = 527.608
+offset_right = 89.816
+offset_bottom = 558.608
+scale = Vector2(2.10027, 2.10027)
+pivot_offset = Vector2(23.405, 15.805)
+text = "PLAY"
+
+[node name="LEADERBOURD" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.331
+anchor_top = -0.383
+anchor_right = 0.454
+anchor_bottom = -0.293
+offset_left = 52.688
+offset_top = 578.184
+offset_right = 195.992
+offset_bottom = 573.864
+text = "TOP 10
+PLAYERS"
+
+[node name="QUIT" type="Button" parent="."]
+offset_left = 434.0
+offset_top = 390.0
+offset_right = 719.0
+offset_bottom = 421.0
+text = "QUIT"
+
+[connection signal="pressed" from="START" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="LEADERBOURD" to="." method="_on_leaderbourd_pressed"]
+[connection signal="pressed" from="QUIT" to="." method="_on_quit_pressed"]

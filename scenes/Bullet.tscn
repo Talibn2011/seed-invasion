@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://4d4s8xuy6mkt"]
+
+[ext_resource type="Script" uid="uid://dhygda8md27t1" path="res://scripts/bullet (2).gd" id="1_51h0o"]
+[ext_resource type="Texture2D" uid="uid://c2yn5u5vmoi35" path="res://assets/Bullet.png" id="2_51h0o"]
+[ext_resource type="AudioStream" uid="uid://sk3f81r5njh3" path="res://assets/mp3/chick-chirping-75543.mp3" id="3_4utqk"]
+[ext_resource type="AudioStream" uid="uid://5e62vl5gn1l8" path="res://assets/mp3/gun sound.mp3" id="4_51h0o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4m4t0"]
+atlas = ExtResource("2_51h0o")
+region = Rect2(0, 0, 1251, 1124)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y25gk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4m4t0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l5glv"]
+radius = 62.0081
+
+[node name="Bullet" type="Area2D"]
+scale = Vector2(0.218992, 0.245686)
+script = ExtResource("1_51h0o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.42109e-14, 0)
+scale = Vector2(0.108109, 0.108109)
+sprite_frames = SubResource("SpriteFrames_y25gk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_l5glv")
+
+[node name="chicken" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1.42109e-14, 0)
+scale = Vector2(0.194107, 0.194107)
+stream = ExtResource("3_4utqk")
+volume_db = 24.0
+autoplay = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1.42109e-14, 0)
+scale = Vector2(0.194107, 0.194107)
+stream = ExtResource("4_51h0o")
+volume_db = 0.21
+autoplay = true
+max_distance = 112085.0
